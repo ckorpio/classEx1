@@ -1,0 +1,19 @@
+{
+  "name": "CKclassEx1",
+  "version": "1.0.0",
+  "description": "CKs Express Test on Render",
+  "main": "exercise1.js",
+  "repository": "https://github.com/ckorpio/classEx1",
+  "author": "CK",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node exercise1.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
