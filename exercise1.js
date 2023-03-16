@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser=require('body-parser');
 const app = express();
 const port = 3000;
+var fs = require("fs");
 
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
@@ -13,16 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
   const myquery = req.query;
-  
   var outstring = 'Starting... ';
-  for(var key in myquery) { outstring += "--" + key + ">" + myquery[key]; }
- 
   res.send(outstring);
+});
 
-  
-var fs = require("fs");
 
-// Write to a file (get request)
+// Write to a file 
 
 app.get('/wfile', function(req, res) {
   const myquery = req.query;
