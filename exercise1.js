@@ -44,11 +44,13 @@ app.get('/wfile', function(req, res) {
 // Simple cascade
 app.param('name', function(req, res, next, name) {
   const modified = name.toUpperCase();
-
   req.name = modified;
   next();
 });
 
+app.get('/api/say/:name', function(req, res) {
+  res.send('Hello ' + req.name + '!');
+});
 
 // A POST request
 
