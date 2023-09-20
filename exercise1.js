@@ -66,3 +66,13 @@ app.post('/post/users', function(req, res) {
   });
 });
 
+// Using a local form (like post.html)
+app.get("/getfile",function(req,res) {
+  fs.readFile('post.html','utf8',(err,data)=>{
+    console.log(data)
+    if(err){
+      res.send('some err occured ',err);
+    }
+    res.send(data);
+  })
+})
